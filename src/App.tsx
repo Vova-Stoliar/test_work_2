@@ -1,27 +1,16 @@
+/* eslint-disable max-len */
+/* eslint-disable no-console */
 import React from 'react';
 import './App.scss';
 
-interface Props {
-  onClick: () => void;
-}
-
-export const Provider: React.FC<Props> = React.memo(
-  ({ onClick, children }) => (
-    <button
-      type="button"
-      onClick={onClick}
-    >
-      {children}
-    </button>
-  ),
-);
+import { dataFromServer } from './api/api';
 
 export const App: React.FC = () => {
   return (
-    <div className="starter">
-      <Provider onClick={() => ({})}>
-        <TodoList />
-      </Provider>
+    <div>
+      Vovam
     </div>
   );
 };
+
+dataFromServer();
